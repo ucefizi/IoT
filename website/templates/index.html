@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}List of rooms -- IEEE INPT SB IoT Platform{% endblock %}
+
+{% block content %}
+    <h3>List of rooms</h3>
+    <ul>
+    	{% for room in rooms %}
+    		<li>
+    			<a href="{% url 'room_captures' room.id %}"> {{ room.name }} </a>
+    		</li>
+    	{% endfor %}
+    </ul>
+    <h5><a href="{% url 'home' %}">Back to home page</a></h5>
+{% endblock %}

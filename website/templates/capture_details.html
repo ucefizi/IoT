@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Capture details -- IEEE INPT SB IoT Platform{% endblock %}
+
+{% block content %}
+	<h3>Captured at: {{ capture.when|date:"D d M Y" }} {{ capture.when|time:"H:i:s e" }}</h3>
+	<p> Room: {{ capture.room }}</p>
+	<p> Type: {{ capture.var }} measurement.</p>
+	<p> Value: {{ capture.value }} {{ capture.unit }}.</p>
+	<h5><a href="{% url 'home' %}">Back to home page</a></h5>
+{% endblock %}

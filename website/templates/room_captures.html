@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}List of captures -- {{ room.name }} -- IEEE INPT SB IoT Platform{% endblock %}
+
+{% block content %}
+    <h3>List of captures for room {{ room.name }}</h3>
+    <ul>
+    	{% for capture in captures %}
+    		<li>
+    			<a href="{% url 'capture_details' capture.id %}"> {{ capture.when|date:"D d M Y" }} {{ capture.when|time:"H:i:s" }}</a>
+    		</li>
+    	{% endfor %}
+    </ul>
+    <h5><a href="{% url 'home' %}">Back to home page</a></h5>
+{% endblock %}
