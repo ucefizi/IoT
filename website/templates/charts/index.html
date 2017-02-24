@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}New plot -- IEEE INPT SB IoT Platform{% endblock %}
+{% block title %}New plot{% endblock %}
 
 {% block content %}
-    <h1>Choose the room, the variable you want to plot and the type of the plot:</h1>
+    <h1>Choose the room, the variable you want to plot, the type of the plot and the time interval:</h1>
     <form action="." method="post">
         {% csrf_token %}
         {{ form }}

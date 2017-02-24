@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 import django
-
+import matplotlib.pyplot
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
@@ -19,23 +19,31 @@ def index(request):
 		x=[]
 		y=[]
 		for capt in captures:
-			x.append(capt.when)
-			y.append(capt.value)
-		
-		if chart.plot == 'scatter':
-			ax.plot(x, y, 'ro')
-		elif chart.plot == 'line' :
-			ax.plot(x, y, 'r-')
-		elif chart.plot == 'bar':
-			ax.bar(x, y, width=10)
-		else: return HttpResponse('Please specify a valid plot!')
+			if capt.when >= chart.fromdate and capt.when <= chart.todate:
+				x.append(capt.when)
+				y.append(capt.value)
 
-		ax.xaxis_date()
+		if len(x) >= 1:
+			if chart.plot == 'scatter':
+				ax.plot(x, y, 'ro')
+			elif chart.plot == 'line' :
+				ax.plot(x, y, 'r-')
+			elif chart.plot == 'bar':
+				ax.bar(x, y, width=10)
+			else: return HttpResponse('Please specify a valid plot!')
 
-		canvas=FigureCanvas(fig)
-		response=django.http.HttpResponse(content_type='image/png')
-		canvas.print_png(response)
-		return response
+			ax.set_xlabel('time')
+			ax.set_ylabel(chart.var)
+			ax.set_title(chart.plot + 'plot' + ' for the ' + chart.var + ' of the room ' + chart.room)
+			ax.xaxis_date()
+
+			fig.autofmt_xdate()
+
+			canvas=FigureCanvas(fig)
+			response=django.http.HttpResponse(content_type='image/png')
+			canvas.print_png(response)
+			return response
+		else: return HttpResponse('Nothing found!', status=404)
 
 	else:
 		form = ChartForm()
