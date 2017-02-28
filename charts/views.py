@@ -28,13 +28,13 @@ def index(request):
 				ax.plot(x, y, 'ro')
 			elif chart.plot == 'line' :
 				ax.plot(x, y, 'r-')
-			elif chart.plot == 'bar':
-				ax.bar(x, y, width=10)
+			elif chart.plot == 'scatterline':
+				ax.plot(x, y, 'ro-')
 			else: return HttpResponse('Please specify a valid plot!')
 
 			ax.set_xlabel('time')
 			ax.set_ylabel(chart.var)
-			ax.set_title(chart.plot + 'plot' + ' for the ' + chart.var + ' of the room ' + chart.room)
+			ax.set_title(chart.plot + 'plot for the ' + chart.var + ' of the room ' + chart.room)
 			ax.xaxis_date()
 
 			fig.autofmt_xdate()

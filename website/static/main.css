@@ -1,8 +1,20 @@
-h1, h2, h3 {
-    font-size: 2.5em;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-a {
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+h1, h2, h3 {
     font-size: 2em;
 }
 
@@ -11,10 +23,11 @@ ul {
 }
 
 .hovered {
-    opacity: .6;
+    opacity: .7;
 }
 
 a {
     text-decoration: none;
     color: #33D;
+    font-size: 2em;
 }

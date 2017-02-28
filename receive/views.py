@@ -11,9 +11,9 @@ def room(request, name, surf, vol, key):
 			new_room.surface = surf
 			new_room.volume = vol
 			new_room.save()
-			return HttpResponse('Room Saved!')
-		else: return HttpResponse('That room already saved!', status=445)
-	else: return HttpResponse('Access Denied!', status=401)
+			return HttpResponse('room saved')
+		else: return HttpResponse('room already in db', status=445)
+	else: return HttpResponse('denied', status=401)
 
 def capture(request, var, val, unit, room, key):
 	if key == NON_SECRET_KEY:
@@ -21,8 +21,8 @@ def capture(request, var, val, unit, room, key):
 		if not len(x):
 			new_room = Room()
 			new_room.name = room
-			new_room.surface = 15
-			new_room.volume = 45
+			new_room.surface = 15.0
+			new_room.volume = 45.0
 			new_room.save()
 		new_capture = Capture()
 		new_capture.var = var
@@ -30,5 +30,27 @@ def capture(request, var, val, unit, room, key):
 		new_capture.unit = unit
 		new_capture.room = room
 		new_capture.save()
-		return HttpResponse('Capture Saved!')
-	else: return HttpResponse('Access Denied!', status=401)
+		return HttpResponse('saved')
+	else: return HttpResponse('denied', status=401)
+
+def captures(request, var, val, unit, room, key):
+	if key == NON_SECRET_KEY:
+		types = var.split(';')[:-1]
+		values = val.split(';')[:-1]
+		units = unit.split(';')[:-1]
+		x = Room.objects.filter(name=room)
+		if not len(x):
+			new_room = Room()
+			new_room.name = room
+			new_room.surface = 15.0
+			new_room.volume = 45.0
+			new_room.save()
+		for i in range(len(types)):
+			new_capture = Capture()
+			new_capture.var = types[i]
+			new_capture.value = float(values[i])
+			new_capture.unit = units[i]
+			new_capture.room = room
+			new_capture.save()
+		return HttpResponse('saved')
+	else: return HttpResponse('denied', status=401)

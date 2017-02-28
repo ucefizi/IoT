@@ -26,7 +26,7 @@ NON_SECRET_KEY = 'dffd8ee4fr7e54s5d4eefAAD45sdSS484544'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.16.108.24', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['Huntaa.izi.org', '172.16.108.136', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
