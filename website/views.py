@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.http import Http404
+
 from receive.models import *
 
 def home(request):

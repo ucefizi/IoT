@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+
 from .models import *
 from website.settings import NON_SECRET_KEY
 

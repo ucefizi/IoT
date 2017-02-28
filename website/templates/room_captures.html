@@ -4,8 +4,9 @@
 
 {% block content %}
     <h3>List of captures for room {{ room.name }}</h3>
-    <table>
-    	<tr>
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for types.." title="Type in a type">
+    <table id="myTable">
+    	<tr class="header">
     		<th>Time</th>
     		<th>Type</th>
     		<th>Value</th>
