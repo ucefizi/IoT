@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from django.http import Http404
 
 from receive.models import *
+from charts.forms import *
 
 def home(request):
 	return render(request, 'home.html')
@@ -17,9 +18,11 @@ def room_captures(request, id):
 	except Room.DoesNotExist: raise Http404('This room does not exist')
 	try: captures = Capture.objects.filter(room=room.name)
 	except Capture.DoesNotExist: raise Http404('This room has no captures yet')
+	form = ChartForm(initial={'room': room.name})
 	return render(request, 'room_captures.html', {
 		'captures': captures,
 		'room': room,
+		'form': form,
 	})
 
 def capture_details(request, id):

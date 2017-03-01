@@ -23,7 +23,7 @@ ul {
 }
 
 .hovered {
-    opacity: .7;
+    opacity: .75;
 }
 
 a {
@@ -37,15 +37,15 @@ a {
   box-sizing: border-box;
 }
 
-#myInput {
+#typeInput, #timeInput {
   background-image: url('/website/static/searchiconth.png');
   background-position: 2px 2px;
   background-repeat: no-repeat;
-  width: 50%;
+  width: 45%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  margin: 12px;
 }
 
 #myTable {
@@ -66,4 +66,58 @@ a {
 
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
+}
+.tab {
+  margin-left: 30px;
+}
+
+.button {
+  position: relative;
+  left: 40px;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid #33D;
+  padding: 10px;
+}
+
+img.logo {
+  max-width: 50%;
+  max-height: 50%;
+  float: left;
+}
+
+.navbarItem {
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  float: left;
+}
+
+
+#navbar {
+  background-color: grey;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.main {
+  padding-top: 20px;
+  margin: 50px;
 }

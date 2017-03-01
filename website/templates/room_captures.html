@@ -4,7 +4,15 @@
 
 {% block content %}
     <h3>List of captures for room {{ room.name }}</h3>
-    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for types.." title="Type in a type">
+    <p class="tab">Plot data from this room: </p>
+    <form action="/charts/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Plot">
+    </form>
+    <br><br>
+    <input type="text" id="timeInput" onkeyup="searchTime()" placeholder="Search for dates.." title="Type in a date">
+    <input type="text" id="typeInput" onkeyup="searchType()" placeholder="Search for types.." title="Type in a type">
     <table id="myTable">
     	<tr class="header">
     		<th>Time</th>
@@ -21,5 +29,4 @@
     		</tr>
     	{% endfor %}
     </table>
-    <h5><a href="{% url 'home' %}">Back to home page</a></h5>
 {% endblock %}
