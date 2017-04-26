@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^receive/', include('receive.urls', namespace='receive', app_name='receive')),
     url(r'^charts/', include('charts.urls', namespace='charts', app_name='charts')),
+    url(r'^api/', include('api.urls', namespace='api', app_name='api')),
 ]
