@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}API{% endblock %}
+{% block content %}
+    <h2>This API provides JSON Data</h2>
+    <h4>There are two URLs to get data from the API:</h4>
+    <p>
+    	<br>
+    	<h5><a href="/api/rooms">/api/rooms</a></h5>
+    	<p>It provides a list of all the rooms in the DataBase</p>
+    	<h5>The data is in this format:</h5>
+    	<p>
+    		{
+    			'len': xx,
+    			'data': {
+    				'room1': {
+    					'surface': xx,
+    					'volume': yy
+    				},
+    				'room2': {
+    					'surface': xx,
+    					'volume': yy
+    				},
+    				 ...,
+    				'roomN': {
+    					'surface': xx,
+    					'volume': yy
+    				},
+    			}
+    		}
+    	</p>
+    </p>
+    <p>
+    	<br>
+    	<h5><a href="/api/data/room=B110">/api/data/room=XXXX</a></h5>
+    	<p>It provides data for a specific room</p>
+    	<h5>The data is in this format:</h5>
+    	<p>
+    		{
+    			'len': xx,
+    			'data': {
+    				'type1': val1,
+    				'type2': val2,
+    				 ... ,
+    				'typeN': valN
+    				}
+    			}
+    		}
+    	</p>
+    </p>
+{% endblock %}

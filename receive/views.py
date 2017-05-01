@@ -55,3 +55,20 @@ def captures(request, var, val, unit, room, key):
 			new_capture.save()
 		return HttpResponse('saved')
 	else: return HttpResponse('denied', status=401)
+
+def thing(request, obj, status, room, key):
+	if key == NON_SECRET_KEY:
+		x = Room.objects.filter(name=room)
+		if not len(x):
+			new_room = Room()
+			new_room.name = room
+			new_room.surface = 15.0
+			new_room.volume = 45.0
+			new_room.save()
+		new_thing = Thing()
+		new_thing.room = room
+		new_thing.obj = obj
+		new_thing.status = status
+		new_thing.save()
+		return HttpResponse('saved')
+	else: return HttpResponse('denied', status=401)

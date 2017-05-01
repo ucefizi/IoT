@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Current Status{% endblock %}
+
+{% block content %}
+	{% for d in data %}
+		{% for i in d.data %}
+			<div class="panel">
+				<div class="panel_header">
+					<h4>{{ d.room }}'s {{ i.name }}</h4>
+				</div>
+				<div>
+					<div class="date">Last updated: {{ i.when }}</div>
+					<div class="current">Current value: {{ i.value|floatformat }}</div>
+					<div class="average">Average value: {{ i.aver|floatformat }}</div>
+					<div class="minmax">
+							Highest value: {{ i.max|floatformat }}
+						<br>Lowest value: {{ i.min|floatformat }}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}
+
+{% block scripts %}<script type="text/javascript">
+	setTimeout(function(){
+		window.location.reload(1);
+	}, 5000)
+</script>{% endblock %}

@@ -1,16 +1,18 @@
 from django.http import JsonResponse
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 from receive.models import *
 
 def index(request):
-	return HttpResponse('This API provides JSON data for front-end devoloppers to use in their apps')
+	return render(request, 'api/index.html')
 
 def rooms(request):
 	r = Room.objects.all()
 	dic = {}
+	dic['len'] = len(r)
+	dic['data'] = {}
 	for i in r:
-		dic[i.name] = {'surface': i.surface, 'volume': i.volume}
+		dic['data'][i.name] = {'surface': i.surface, 'volume': i.volume}
 	return JsonResponse(dic)
 
 def data(request, room):
@@ -19,9 +21,11 @@ def data(request, room):
 	for i in data:
 		types.append(i.var)
 	types = list(set(types))
-	dic = {i:None for i in types}
+	dic = {}
+	dic['len'] = len(types)
+	dic['data'] = {i:None for i in types}
 	for i in data:
-		for j in dic:
-			if i.var == j and dic[j] == None :
-				dic[j] = i.value
+		for j in dic['data']:
+			if i.var == j and dic['data'][j] == None :
+				dic['data'][j] = i.value
 	return JsonResponse(dic)

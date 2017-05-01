@@ -4,11 +4,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY = 'kb%#5grw+om!o!w#x7ki%#wyw7@wxduc7xf@_c((o-hl+s%+d&'
-NON_SECRET_KEY = 'dffd8ee4fr7e54s5d4eefAAD45sdSS484544'
+NON_SECRET_KEY = 'abc123'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['Huntaa.izi.org', '172.16.108.136', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['Huntaa.izi.org', '172.16.108.197', '127.0.0.1', '0.0.0.0', 'localhost']
 
 
 INSTALLED_APPS = [

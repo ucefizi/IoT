@@ -84,8 +84,8 @@ a {
 }
 
 img.logo {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   float: left;
 }
 
@@ -120,4 +120,55 @@ img.logo {
 .main {
   padding-top: 20px;
   margin: 50px;
+}
+
+.panel {
+  border: 3px solid #aaa;
+  background-color: #eeeeee;
+  max-width: 35%;
+  display: inline-block;
+  padding: 5px;
+  height: 40%;
+  margin-top: 5px;
+}
+
+.panel_header {
+  background-color: lightgrey;
+  height: 25%;
+  padding: 5px;
+  font-size: 24px;
+  text-align: center;
+}
+
+div.date {
+  height: 20%;
+  padding: 5px;
+  border: 2px dashed grey;
+  text-align: center;
+}
+
+div.current {
+  height: 30%;
+  font-size: 20px;
+  border: 2px solid grey;
+  padding: 5px;
+  text-align: center;
+}
+
+div.average {
+  max-width: 50%;
+  display: inline-block;
+  border: 2px solid grey;
+  padding: 5px;
+  height: 20%;
+  float: left;
+  text-align: center;
+}
+
+div.minmax {
+  max-width: 50%;
+  display: inline-block;
+  border: 2px solid grey;
+  padding: 5px;
+  float: right;
 }
