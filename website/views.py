@@ -16,7 +16,9 @@ def rooms(request):
 def room_captures(request, id):
 	try: room = Room.objects.get(id=id)
 	except Room.DoesNotExist: raise Http404('This room does not exist')
-	try: captures = Capture.objects.filter(room=room.name)
+	try: 
+		captures = Capture.objects.filter(room=room.name)
+		if len(captures) > 200: captures = captures[len(captures)-200:]
 	except Capture.DoesNotExist: raise Http404('This room has no captures yet')
 	form = ChartForm(initial={'room': room.name})
 	return render(request, 'room_captures.html', {

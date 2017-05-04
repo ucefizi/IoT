@@ -172,3 +172,9 @@ div.minmax {
   padding: 5px;
   float: right;
 }
+
+#headtitle {
+  text-align: center;
+  height: 25%;
+  background-image: url('/website/static/INPT1.jpg');
+}

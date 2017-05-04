@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}List of captures -- Room {{ room.name }} {% endblock %}
+{% block title %}List of captures -- {{ room.name }} {% endblock %}
 
 {% block content %}
-    <h3>List of captures for room {{ room.name }}</h3>
-    <p class="tab">Plot data from this room: </p>
+    <h3>List of captures for {{ room.name }} (last 200 entries)</h3>
+    <p class="tab">Plot data from this location: </p>
     <form action="/charts/" method="post">
         {% csrf_token %}
         {{ form }}

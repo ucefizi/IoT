@@ -35,7 +35,7 @@ def index(request):
 
 			ax.set_xlabel('time')
 			ax.set_ylabel(chart.var)
-			ax.set_title(chart.plot + 'plot for the ' + chart.var + ' of the room ' + chart.room)
+			ax.set_title(chart.plot + 'plot for ' + chart.room  + ' ' + chart.var )
 			ax.xaxis_date()
 
 			fig.autofmt_xdate()

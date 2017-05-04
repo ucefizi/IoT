@@ -10,22 +10,16 @@ def rooms(request):
 	r = Room.objects.all()
 	dic = {}
 	dic['len'] = len(r)
-	dic['data'] = {}
-	for i in r:
-		dic['data'][i.name] = {'surface': i.surface, 'volume': i.volume}
-	return JsonResponse(dic)
+	dic['data'] = [{}]*len(r)
+	for i in range(len(r)):
+		dic['data'][i] = {'room_name': r[i].name, 'surface': r[i].surface, 'volume': r[i].volume}
+		captures = Capture.objects.filter(room=r[i].name)[::-1]
+		types = []
+		for j in captures: types.append(j.var)
+		types = list(set(types))
+		for j in types: dic['data'][i][j] = None
+		for j in captures:
+			for k in types:
+				if j.var == k and dic['data'][i][k] == None : dic['data'][i][k] = j.value
 
-def data(request, room):
-	data = Capture.objects.filter(room=room)
-	types = []
-	for i in data:
-		types.append(i.var)
-	types = list(set(types))
-	dic = {}
-	dic['len'] = len(types)
-	dic['data'] = {i:None for i in types}
-	for i in data:
-		for j in dic['data']:
-			if i.var == j and dic['data'][j] == None :
-				dic['data'][j] = i.value
 	return JsonResponse(dic)

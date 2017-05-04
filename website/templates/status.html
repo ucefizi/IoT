@@ -10,7 +10,7 @@
 					<h4>{{ d.room }}'s {{ i.name }}</h4>
 				</div>
 				<div>
-					<div class="date">Last updated: {{ i.when }}</div>
+					<div class="date">Last updated:<br>{{ i.when|date:"D d M Y" }} {{ i.when|time:"H:i:s" }} UTC</div>
 					<div class="current">Current value: {{ i.value|floatformat }}</div>
 					<div class="average">Average value: {{ i.aver|floatformat }}</div>
 					<div class="minmax">
@@ -23,8 +23,10 @@
 	{% endfor %}
 {% endblock %}
 
-{% block scripts %}<script type="text/javascript">
-	setTimeout(function(){
-		window.location.reload(1);
-	}, 5000)
-</script>{% endblock %}
+{% block scripts %}
+	<script type="text/javascript">
+		setTimeout(function(){
+			window.location.reload(1);
+		}, 10000)
+	</script>
+{% endblock %}

@@ -2,48 +2,44 @@
 {% block title %}API{% endblock %}
 {% block content %}
     <h2>This API provides JSON Data</h2>
-    <h4>There are two URLs to get data from the API:</h4>
+    <h4>There is currently one URL to get data from the API:</h4>
     <p>
     	<br>
     	<h5><a href="/api/rooms">/api/rooms</a></h5>
-    	<p>It provides a list of all the rooms in the DataBase</p>
+    	<p style="font-size: 20px;">It provides a list of all the rooms in the DataBase</p>
     	<h5>The data is in this format:</h5>
-    	<p>
-    		{
-    			'len': xx,
-    			'data': {
-    				'room1': {
-    					'surface': xx,
-    					'volume': yy
-    				},
-    				'room2': {
-    					'surface': xx,
-    					'volume': yy
-    				},
-    				 ...,
-    				'roomN': {
-    					'surface': xx,
-    					'volume': yy
-    				},
-    			}
-    		}
-    	</p>
-    </p>
-    <p>
-    	<br>
-    	<h5><a href="/api/data/room=B110">/api/data/room=XXXX</a></h5>
-    	<p>It provides data for a specific room</p>
-    	<h5>The data is in this format:</h5>
-    	<p>
-    		{
-    			'len': xx,
-    			'data': {
-    				'type1': val1,
-    				'type2': val2,
-    				 ... ,
-    				'typeN': valN
-    				}
-    			}
+    	<p style="font-size: 20px;">
+    		{<br>
+    		&nbsp&nbsp&nbsp'len': xx,<br>
+    		&nbsp&nbsp&nbsp'data': [<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'room_name': room1,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'surface': surf1,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'volume': vol1,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var11': val11,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var12': val12,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   ...,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var1M': val1M<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}, {<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'room_name': room2,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'surface': surf2,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'volume': vol2,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var21': val21,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var22': val22,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   ...,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'var2M': val2M<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   ...,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'room_name': roomN,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'surface': surfN,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'volume': volN,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'varN1': valN1,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'varN2': valN2,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   ...,<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'varNM': valNM<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+            &nbsp&nbsp&nbsp]<br>	
     		}
     	</p>
     </p>
