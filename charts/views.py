@@ -44,10 +44,9 @@ def index(request):
 			response=django.http.HttpResponse(content_type='image/png')
 			canvas.print_png(response)
 			return response
-		else: return HttpResponse('Nothing found!', status=404)
-
-	else:
-		form = ChartForm()
-		return render(request, 'charts/index.html', {
-			'form': form,
-		})
+		return HttpResponse('Nothing found!', status=404)
+	
+	form = ChartForm()
+	return render(request, 'charts/index.html', {
+		'form': form,
+	})

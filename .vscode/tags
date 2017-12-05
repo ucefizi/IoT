@@ -1,0 +1,181 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+0001_initial.py	../receive/migrations/0001_initial.py	1;"	kind:file	line:1
+ALLOWED_HOSTS	../website/local_settings.py	/^ALLOWED_HOSTS = ['Huntaa.izi.org', '172.16.108.197', '127.0.0.1', '0.0.0.0', 'localhost']$/;"	kind:variable	line:11
+ALLOWED_HOSTS	../website/settings.py	/^ALLOWED_HOSTS = ['*']$/;"	kind:variable	line:12
+AUTH_PASSWORD_VALIDATORS	../website/local_settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:68
+AppConfig	../api/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
+AppConfig	../charts/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
+AppConfig	../receive/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
+BASE_DIR	../website/local_settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:3
+Capture	../charts/views.py	/^from receive.models import Capture$/;"	kind:namespace	line:10
+Capture	../receive/models.py	/^class Capture(models.Model):$/;"	kind:class	line:9
+CaptureAdmin	../receive/admin.py	/^class CaptureAdmin(admin.ModelAdmin):$/;"	kind:class	line:7
+Chart	../charts/forms.py	/^from .models import Chart$/;"	kind:namespace	line:2
+Chart	../charts/models.py	/^class Chart(models.Model):$/;"	kind:class	line:5
+ChartForm	../charts/forms.py	/^class ChartForm(forms.ModelForm):$/;"	kind:class	line:4
+ChartsConfig	../charts/apps.py	/^class ChartsConfig(AppConfig):$/;"	kind:class	line:4
+DATABASES	../website/local_settings.py	/^DATABASES = {$/;"	kind:variable	line:57
+DEBUG	../website/local_settings.py	/^DEBUG = True$/;"	kind:variable	line:9
+DjangoWhiteNoise	../website/wsgi.py	/^from whitenoise.django import DjangoWhiteNoise$/;"	kind:namespace	line:18
+Figure	../charts/views.py	/^from matplotlib.figure import Figure$/;"	kind:namespace	line:6
+FigureCanvas	../charts/views.py	/^from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas$/;"	kind:namespace	line:5
+Http404	../website/views.py	/^from django.http import Http404, JsonResponse$/;"	kind:namespace	line:2
+HttpResponse	../api/views.py	/^from django.shortcuts import HttpResponse, render$/;"	kind:namespace	line:2
+HttpResponse	../charts/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+HttpResponse	../receive/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+HttpResponse	../website/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+INSTALLED_APPS	../website/local_settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:14
+JsonResponse	../api/views.py	/^from django.http import JsonResponse$/;"	kind:namespace	line:1
+JsonResponse	../website/views.py	/^from django.http import Http404, JsonResponse$/;"	kind:namespace	line:2
+LANGUAGE_CODE	../website/local_settings.py	/^LANGUAGE_CODE = 'en-uk'$/;"	kind:variable	line:84
+MIDDLEWARE	../website/local_settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:26
+Meta	../charts/forms.py	/^    class Meta:$/;"	kind:class	line:5
+Migration	../receive/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:9
+MobileConfig	../api/apps.py	/^class MobileConfig(AppConfig):$/;"	kind:class	line:4
+NON_SECRET_KEY	../receive/views.py	/^from website.settings import NON_SECRET_KEY$/;"	kind:namespace	line:4
+NON_SECRET_KEY	../website/local_settings.py	/^NON_SECRET_KEY = 'abc123'$/;"	kind:variable	line:7
+PLOT_CHOICES	../charts/models.py	/^	PLOT_CHOICES = ($/;"	kind:variable	line:6
+ROOT_URLCONF	../website/local_settings.py	/^ROOT_URLCONF = 'website.urls'$/;"	kind:variable	line:36
+ReceiveConfig	../receive/apps.py	/^class ReceiveConfig(AppConfig):$/;"	kind:class	line:4
+Room	../receive/models.py	/^class Room(models.Model):$/;"	kind:class	line:4
+RoomAdmin	../receive/admin.py	/^class RoomAdmin(admin.ModelAdmin):$/;"	kind:class	line:4
+SECRET_KEY	../website/local_settings.py	/^SECRET_KEY = 'kb%#5grw+om!o!w#x7ki%#wyw7@wxduc7xf@_c((o-hl+s%+d&'$/;"	kind:variable	line:6
+SECURE_PROXY_SSL_HEADER	../website/settings.py	/^SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')$/;"	kind:variable	line:10
+STATICFILES_DIRS	../website/local_settings.py	/^STATICFILES_DIRS = ($/;"	kind:variable	line:98
+STATIC_URL	../website/local_settings.py	/^STATIC_URL = '\/website\/static\/'$/;"	kind:variable	line:96
+STATUS_CHOICES	../receive/models.py	/^	STATUS_CHOICES = ($/;"	kind:variable	line:17
+TEMPLATES	../website/local_settings.py	/^TEMPLATES = [$/;"	kind:variable	line:38
+TIME_INPUT_FORMATS	../website/local_settings.py	/^TIME_INPUT_FORMATS = ['%H:%M:%S',]$/;"	kind:variable	line:94
+TIME_ZONE	../website/local_settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:86
+TestCase	../api/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
+TestCase	../charts/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
+TestCase	../receive/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
+Thing	../receive/models.py	/^class Thing(models.Model):$/;"	kind:class	line:16
+USE_I18N	../website/local_settings.py	/^USE_I18N = True$/;"	kind:variable	line:88
+USE_L10N	../website/local_settings.py	/^USE_L10N = False$/;"	kind:variable	line:90
+USE_TZ	../website/local_settings.py	/^USE_TZ = False$/;"	kind:variable	line:92
+WSGI_APPLICATION	../website/local_settings.py	/^WSGI_APPLICATION = 'website.wsgi.application'$/;"	kind:variable	line:54
+__init__.py	../api/__init__.py	1;"	kind:file	line:1
+__init__.py	../charts/__init__.py	1;"	kind:file	line:1
+__init__.py	../receive/__init__.py	1;"	kind:file	line:1
+__init__.py	../receive/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../website/__init__.py	1;"	kind:file	line:1
+admin	../api/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
+admin	../charts/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
+admin	../receive/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
+admin	../website/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:2
+admin.py	../api/admin.py	1;"	kind:file	line:1
+admin.py	../charts/admin.py	1;"	kind:file	line:1
+admin.py	../receive/admin.py	1;"	kind:file	line:1
+application	../website/wsgi.py	/^application = DjangoWhiteNoise(application)/;"	kind:variable	line:19
+application	../website/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	../api/apps.py	1;"	kind:file	line:1
+apps.py	../charts/apps.py	1;"	kind:file	line:1
+apps.py	../receive/apps.py	1;"	kind:file	line:1
+capture	../receive/views.py	/^def capture(request, var, val, unit, room, key):$/;"	kind:function	line:19
+capture_details	../website/views.py	/^def capture_details(request, id):$/;"	kind:function	line:30
+captures	../receive/views.py	/^def captures(request, var, val, unit, room, key):$/;"	kind:function	line:37
+datetime	../charts/models.py	/^import datetime$/;"	kind:namespace	line:3
+dependencies	../receive/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:13
+dj_database_url	../website/settings.py	/^import dj_database_url$/;"	kind:namespace	line:1
+django	../charts/views.py	/^import django$/;"	kind:namespace	line:2
+django	../manage.py	/^            import django$/;"	kind:namespace	line:14
+django	../receive/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
+execute_from_command_line	../manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
+fields	../charts/forms.py	/^        fields = ('room', 'var', 'plot', 'fromdate', 'todate')/;"	kind:variable	line:7
+fields	../receive/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:19
+fields	../receive/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:30
+fields	../receive/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:39
+forms	../charts/forms.py	/^from django import forms$/;"	kind:namespace	line:1
+forms.py	../charts/forms.py	1;"	kind:file	line:1
+fromdate	../charts/models.py	/^	fromdate = models.DateTimeField(default=datetime.datetime(2017, 1, 1))$/;"	kind:variable	line:14
+get_wsgi_application	../website/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
+home	../website/views.py	/^def home(request):$/;"	kind:function	line:7
+include	../website/urls.py	/^from django.conf.urls import url, include$/;"	kind:namespace	line:1
+index	../api/views.py	/^def index(request):$/;"	kind:function	line:6
+index	../charts/views.py	/^def index(request):$/;"	kind:function	line:12
+initial	../receive/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:11
+list_display	../receive/admin.py	/^	list_display = ('name',)$/;"	kind:variable	line:5
+list_display	../receive/admin.py	/^	list_display = ('room', 'when')$/;"	kind:variable	line:8
+local_settings.py	../website/local_settings.py	1;"	kind:file	line:1
+manage.py	../manage.py	1;"	kind:file	line:1
+matplotlib	../charts/views.py	/^import matplotlib.pyplot$/;"	kind:namespace	line:4
+migrations	../receive/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+model	../charts/forms.py	/^        model = Chart$/;"	kind:variable	line:6
+models	../charts/models.py	/^from django.db import models$/;"	kind:namespace	line:1
+models	../receive/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+models	../receive/models.py	/^from django.db import models$/;"	kind:namespace	line:1
+models.py	../charts/models.py	1;"	kind:file	line:1
+models.py	../receive/models.py	1;"	kind:file	line:1
+name	../api/apps.py	/^    name = 'mobile'$/;"	kind:variable	line:5
+name	../charts/apps.py	/^    name = 'charts'$/;"	kind:variable	line:5
+name	../receive/apps.py	/^    name = 'receive'$/;"	kind:variable	line:5
+name	../receive/migrations/0001_initial.py	/^            name='Capture',$/;"	kind:variable	line:18
+name	../receive/migrations/0001_initial.py	/^            name='Room',$/;"	kind:variable	line:29
+name	../receive/migrations/0001_initial.py	/^            name='Thing',$/;"	kind:variable	line:38
+name	../receive/models.py	/^	name = models.CharField(max_length=25)$/;"	kind:variable	line:5
+obj	../receive/models.py	/^	obj = models.CharField(max_length=25)$/;"	kind:variable	line:22
+operations	../receive/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:16
+os	../manage.py	/^import os$/;"	kind:namespace	line:2
+os	../website/local_settings.py	/^import os$/;"	kind:namespace	line:1
+os	../website/wsgi.py	/^import os$/;"	kind:namespace	line:10
+plot	../charts/models.py	/^	plot = models.CharField(max_length=15, choices=PLOT_CHOICES, default='scatter')$/;"	kind:variable	line:13
+pyplot	../charts/views.py	/^import matplotlib.pyplot$/;"	kind:namespace	line:4
+render	../api/views.py	/^from django.shortcuts import HttpResponse, render$/;"	kind:namespace	line:2
+render	../charts/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+render	../receive/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+render	../website/views.py	/^from django.shortcuts import render, HttpResponse$/;"	kind:namespace	line:1
+room	../charts/models.py	/^	room = models.CharField(max_length=25)$/;"	kind:variable	line:11
+room	../receive/models.py	/^	room = models.CharField(max_length=25)$/;"	kind:variable	line:10
+room	../receive/models.py	/^	room = models.CharField(max_length=25)$/;"	kind:variable	line:21
+room	../receive/views.py	/^def room(request, name, surf, vol, key):$/;"	kind:function	line:6
+room_captures	../website/views.py	/^def room_captures(request, id):$/;"	kind:function	line:16
+rooms	../api/views.py	/^def rooms(request):$/;"	kind:function	line:9
+rooms	../website/views.py	/^def rooms(request):$/;"	kind:function	line:10
+settings.py	../website/settings.py	1;"	kind:file	line:1
+status	../receive/models.py	/^	status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='off')$/;"	kind:variable	line:23
+status	../website/views.py	/^def status(request):$/;"	kind:function	line:37
+surface	../receive/models.py	/^	surface = models.FloatField()$/;"	kind:variable	line:6
+sys	../manage.py	/^import sys$/;"	kind:namespace	line:3
+tests.py	../api/tests.py	1;"	kind:file	line:1
+tests.py	../charts/tests.py	1;"	kind:file	line:1
+tests.py	../receive/tests.py	1;"	kind:file	line:1
+thing	../receive/views.py	/^def thing(request, obj, status, room, key):$/;"	kind:function	line:59
+timezone	../charts/models.py	/^from django.utils import timezone$/;"	kind:namespace	line:2
+timezone	../receive/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
+timezone	../receive/models.py	/^from django.utils import timezone$/;"	kind:namespace	line:2
+todate	../charts/models.py	/^	todate = models.DateTimeField(default=timezone.now)/;"	kind:variable	line:15
+unicode_literals	../receive/migrations/0001_initial.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unit	../receive/models.py	/^	unit = models.CharField(max_length=10)$/;"	kind:variable	line:14
+url	../api/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:1
+url	../charts/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:1
+url	../receive/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:1
+url	../website/urls.py	/^from django.conf.urls import url, include$/;"	kind:namespace	line:1
+urlpatterns	../api/urls.py	/^urlpatterns = [$/;"	kind:variable	line:3
+urlpatterns	../charts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:3
+urlpatterns	../receive/urls.py	/^urlpatterns = [$/;"	kind:variable	line:3
+urlpatterns	../website/urls.py	/^urlpatterns = [$/;"	kind:variable	line:5
+urls.py	../api/urls.py	1;"	kind:file	line:1
+urls.py	../charts/urls.py	1;"	kind:file	line:1
+urls.py	../receive/urls.py	1;"	kind:file	line:1
+urls.py	../website/urls.py	1;"	kind:file	line:1
+utils	../receive/migrations/0001_initial.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
+value	../receive/models.py	/^	value = models.FloatField()$/;"	kind:variable	line:12
+var	../charts/models.py	/^	var = models.CharField(max_length=25)$/;"	kind:variable	line:12
+var	../receive/models.py	/^	var = models.CharField(max_length=20)$/;"	kind:variable	line:13
+views	../api/urls.py	/^from . import views$/;"	kind:namespace	line:2
+views	../charts/urls.py	/^from . import views$/;"	kind:namespace	line:2
+views	../receive/urls.py	/^from . import views$/;"	kind:namespace	line:2
+views.py	../api/views.py	1;"	kind:file	line:1
+views.py	../charts/views.py	1;"	kind:file	line:1
+views.py	../receive/views.py	1;"	kind:file	line:1
+views.py	../website/views.py	1;"	kind:file	line:1
+volume	../receive/models.py	/^	volume = models.FloatField()$/;"	kind:variable	line:7
+when	../receive/models.py	/^	when = models.DateTimeField(default=timezone.now)$/;"	kind:variable	line:11
+when	../receive/models.py	/^	when = models.DateTimeField(default=timezone.now)/;"	kind:variable	line:24
+wsgi.py	../website/wsgi.py	1;"	kind:file	line:1
