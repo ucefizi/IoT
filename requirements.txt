@@ -41,7 +41,7 @@ pandas==0.19.1
 pandoc==1.0.0b2
 pexpect==4.2.1
 pickleshare==0.7.4
-Pillow==4.0.0
+Pillow==6.2.0
 plotly==1.12.9
 ply==3.9
 prompt-toolkit==1.0.9
