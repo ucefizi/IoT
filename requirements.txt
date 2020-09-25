@@ -78,7 +78,7 @@ SecretStorage==2.3.1
 simplegeneric==0.8.1
 six==1.10.0
 smoke-zephyr==1.0.2
-tensorflow==1.15.2
+tensorflow==1.15.4
 terminado==0.6
 termineter==0.2.6
 tornado==4.4.2
